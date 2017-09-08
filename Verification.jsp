@@ -42,7 +42,7 @@ String name = request.getParameter("Uname");
 	    
 	    
 	   try{
-		   PreparedStatement pst= conn.prepareStatement("Select * from users where uname=? and password=?  ");
+		   PreparedStatement pst= conn.prepareStatement("Select * from user_details where Uname=? and Password=?  ");
 		   pst.setString(1,name);
 		   pst.setString(2,pwd);
 		   rs=pst.executeQuery();
