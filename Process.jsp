@@ -32,8 +32,8 @@ String name = request.getParameter("Name");
 
 String email = request.getParameter("Email");
 String company = request.getParameter("Company");
-String crDate = request.getParameter("CreationDate");
-String crTime = request.getParameter("CreationTime");
+//String crDate = request.getParameter("CreationDate");
+//String crTime = request.getParameter("CreationTime");
 
 
 	 Test t = new Test();
