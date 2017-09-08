@@ -46,7 +46,7 @@ String crTime = request.getParameter("CreationTime");
 	    
 	    
 	   try{
-		   PreparedStatement pst= conn.prepareStatement("Select * from users where email =? ");
+		   PreparedStatement pst= conn.prepareStatement("Select * from user_details where Email =? ");
 		   pst.setString(1,email);
 		   rs=pst.executeQuery();
 		 	
@@ -57,7 +57,7 @@ String crTime = request.getParameter("CreationTime");
 			 
 		 }
 		 
-	    int i = st.executeUpdate("insert into users(uname, password,name, email, company, CreationDate, CreationTime ) values ('" + user + "','" + pwd + "','" + name + "','" + email + "', '" + company + "',  CURDATE() ,  CURTIME() )" );
+	    int i = st.executeUpdate("insert into user_details(Name, Email, Company, Password, CreationTime, Uname, CreationDate) values ('" + name + "','" + email + "','" + company + "','" + pwd + "',  CURTIME(), '" + user + "',  CURDATE()  )" );
 	    System.out.println("i:::"+i);
 	    if (i>0) {
 	    	RequestDispatcher rd=request.getRequestDispatcher("Login.jsp"); 
